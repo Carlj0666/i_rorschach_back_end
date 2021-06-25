@@ -1,0 +1,2 @@
+class InkblotsController < ApplicationController
+end
