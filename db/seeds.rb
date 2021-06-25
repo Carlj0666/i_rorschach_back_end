@@ -20,4 +20,4 @@
 #         {link: 'https://upload.wikimedia.org/wikipedia/commons/7/70/Rorschach_blot_10.jpg'},
 #     ])
 
-comment = Comment.create(verbiage: "Cool" inkblot_id: '1')
+comment = Comment.create(verbiage: "Cool", inkblot_id: '1')
