@@ -1,8 +1,12 @@
 class InkblotsController < ApplicationController
     def index
-    inkblots = Inkblot.all
-    render json:inkblots
-    # May need below to render in REACT app instead of line 4
-    # render json: inkblts.to_json(except: [:created_at, :updated_at])
+        inkblots = Inkblot.all
+        render json: InkblotSerializer.new(inkblots)
     end
+
+    def show
+        inkblot =  Inkblot.find(params[:id])
+        render json:inkblots
+    end
+
 end
