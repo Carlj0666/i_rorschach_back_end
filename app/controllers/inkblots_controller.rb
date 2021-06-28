@@ -6,7 +6,7 @@ class InkblotsController < ApplicationController
 
     def show
         inkblot =  Inkblot.find(params[:id])
-        render json:inkblots
+        render json:inkblot
     end
 
 end
