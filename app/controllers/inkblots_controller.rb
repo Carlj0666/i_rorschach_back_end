@@ -1,9 +1,13 @@
 class InkblotsController < ApplicationController
 
+    def new
+        inkblot = Inkblot.new
+    end
+
     def create
         inkblot = Inkblot.new(inkblot_params)
         if inkblot.save
-            render json:inkblot_serializer.new(inkblot)
+            render json:InkblotSerializer.new(inkblot)
         else
             render json: {error:inkblot.errors}
         end
@@ -14,11 +18,8 @@ class InkblotsController < ApplicationController
         render json: InkblotSerializer.new(inkblots)
     end
 
-    def show
-        inkblot =  Inkblot.find(params[:id])
-        render json:inkblot
+    def inkblot_params
+        params.require(:inkblot).permit(:link)
     end
-
-
-
+        
 end
