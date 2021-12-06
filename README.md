@@ -9,6 +9,8 @@ Line 10, 'origins' specifies website where allowed req's come from. Currently se
 
 Under config/routes, line (resources :model_name) allows full CRUD functionality, can specify/limit.
 
+Using Serializer to specify what data to render to json
+
 # Installation
 Open the (backend) of i-Rorschach in your favorite text editor, run (rails s -p 3001) in the console to spin up the server. Open the (frontend) of i-Rorschach, this app, and run (npm start) in the console to load webpage from the local host.
 
