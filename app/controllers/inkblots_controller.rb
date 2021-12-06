@@ -7,7 +7,7 @@ class InkblotsController < ApplicationController
     def create
         inkblot = Inkblot.new(inkblot_params)
         if inkblot.save
-            render json:InkblotSerializer.new(inkblot)
+            render json: InkblotSerializer.new(inkblot)
         else
             render json: {error:inkblot.errors}
         end
